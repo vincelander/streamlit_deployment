@@ -76,29 +76,26 @@ def price_plot(symbol):
 
 num_company = st.sidebar.slider('Number of Companies', 1, 5)
 
-if st.button('Show Plots'):
+if st.button('Show Plots', use_container_width=True):
     st.header('Stock Closing Price')
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
 
-st.link_button("<< Go back to portfolio website", "https://vincelander.github.io/", use_container_width=True)
 
+container = st.container()
+container.markdown(
+    """
+    <style>
+    .right-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-#  import streamlit as st
-# >>>
-# >>> st.markdown("*Streamlit* is **really** ***cool***.")
-# >>> st.markdown('''
-# ...     :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
-# ...     :gray[pretty] :rainbow[colors] and :blue-background[highlight] text.''')
-# >>> st.markdown("Here's a bouquet &mdash;\
-# ...             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
-# >>>
-# >>> multi = '''If you end a line with two spaces,
-# ... a soft return is used for the next line.
-# ...
-# ... Two (or more) newline characters in a row will result in a hard return.
-# ... '''
-# >>> st.markdown(multi)
-# output
-
-# https://doc-markdown.streamlit.app/ height: 350px
+with container:
+    st.markdown('<div class="right-button">', unsafe_allow_html=True)
+    st.link_button("<< Go back to portfolio website", "https://vincelander.github.io/")
+    st.markdown('</div>', unsafe_allow_html=True)
