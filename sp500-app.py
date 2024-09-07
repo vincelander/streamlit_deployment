@@ -89,22 +89,22 @@ col1, col2, col3 = st.columns([2, 1, 1])
 with col3:
     st.link_button("<< back", "https://vincelander.github.io/")
 
+# Define the CSS for right alignment
+st.markdown(
+    """
+    <style>
+    .right-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-#  import streamlit as st
-# >>>
-# >>> st.markdown("*Streamlit* is **really** ***cool***.")
-# >>> st.markdown('''
-# ...     :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
-# ...     :gray[pretty] :rainbow[colors] and :blue-background[highlight] text.''')
-# >>> st.markdown("Here's a bouquet &mdash;\
-# ...             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
-# >>>
-# >>> multi = '''If you end a line with two spaces,
-# ... a soft return is used for the next line.
-# ...
-# ... Two (or more) newline characters in a row will result in a hard return.
-# ... '''
-# >>> st.markdown(multi)
-# output
-
-# https://doc-markdown.streamlit.app/ height: 350px
+# Create a container and apply the CSS class
+container = st.container()
+with container:
+    st.markdown('<div class="right-button">', unsafe_allow_html=True)
+    st.link_button("<< back", "https://vincelander.github.io/")
+    st.markdown('</div>', unsafe_allow_html=True)
