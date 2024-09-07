@@ -84,13 +84,16 @@ def price_plot(symbol):
 
 num_company = st.sidebar.slider('Number of Companies', 1, 5)
 
+if st.button('Show Data Plots', use_container_width=True):
+    st.header('Stock Closing Price')
+    for i in list(df_selected_sector.Symbol)[:num_company]:
+        price_plot(i)
+st.markdown("""
+<br>
+""", unsafe_allow_html=True)
+
 col1, col2, col3= st.columns([1, 1, 1])
 with col1:
-    if st.button('Show Plots', use_container_width=True):
-        st.header('Stock Closing Price')
-        for i in list(df_selected_sector.Symbol)[:num_company]:
-            price_plot(i)
-with col3:
     st.download_button(
         label="Download data as CSV",
         data=csv,
@@ -98,12 +101,6 @@ with col3:
         mime="text/csv",
         use_container_width=True,
     )
-
-st.markdown("""
-<br>
-""", unsafe_allow_html=True)
-
-col1, col2, col3= st.columns([1, 1, 1])
 with col3:
     st.link_button("<< Go back to portfolio", "https://vincelander.github.io/", use_container_width=True)
 
