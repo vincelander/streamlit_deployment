@@ -17,5 +17,5 @@ A project aimed to build a web scraper retrieving S&P 500 data from [Wikipedia](
 
 Thanks for visiting. If you want to know more about me, please go to the links below or drop me an email at <vincelander27@gmail.com>.
 
-- [Linkedin](https://www.linkedin.com/in/vince-lander-gamboa/)
+- [Linkedin Profile](https://www.linkedin.com/in/vince-lander-gamboa/)
 - [Portfolio Website](https://vincelander.github.io/)
