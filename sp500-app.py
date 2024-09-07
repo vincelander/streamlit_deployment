@@ -83,17 +83,12 @@ if st.button('Show Plots'):
 
 st.link_button("<< Go back to portfolio website", "https://vincelander.github.io/", use_container_width=True)
 
-import streamlit as st
-
-col1, col2, col3 = st.columns([2, 1, 1])
-with col3:
-    st.link_button("<< back", "https://vincelander.github.io/")
 
 # Define the CSS for right alignment
 st.markdown(
     """
     <style>
-    .right-button {
+    .right-align {
         display: flex;
         justify-content: flex-end;
     }
@@ -103,8 +98,6 @@ st.markdown(
 )
 
 # Create a container and apply the CSS class
-container = st.container()
-with container:
-    st.markdown('<div class="right-button">', unsafe_allow_html=True)
-    st.link_button("<< back", "https://vincelander.github.io/")
-    st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('<div class="right-align">', unsafe_allow_html=True)
+st.button("Right Aligned Button")
+st.markdown('</div>', unsafe_allow_html=True)
