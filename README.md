@@ -1,6 +1,6 @@
 ## Web Scraper
 
-A project aimed to build a web scraper retrieving S&P 500 data from [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
+A project aimed to build a web scraper retrieving S&P 500 data from [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies). View this project's demo [here](https://vincelander-webscraper.streamlit.app/).
 
 ### Main function
 
