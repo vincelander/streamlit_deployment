@@ -14,6 +14,12 @@ A project aimed to build a web scraper retrieving S&P 500 data from [Wikipedia](
 - Download
 - Plot Graph
 
+### Tech Stack
+
+- Python libraries: base64, pandas, streamlit, numpy, matplotlib, seaborn
+- Web Hosting: [Streamlit.io](https://streamlit.io/)
+- Data source: Wikipedia.
+
 
 Thanks for visiting. If you want to know more about me, please go to the links below or drop me an email at <vincelander27@gmail.com>.
 
