@@ -86,7 +86,7 @@ st.link_button("<< Go back to portfolio website", "https://vincelander.github.io
 
 import streamlit as st
 
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.button("Centered Button")
+col1, col2, col3= st.columns([1, 1, 2])
+with col3:
+    st.link_button("<< Go back to portfolio website", "https://vincelander.github.io/", use_container_width=True)
 
