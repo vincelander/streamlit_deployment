@@ -18,7 +18,7 @@ st.sidebar.header('User Input Features')
 
 # Web scraping of S&P 500 data
 #
-@st.cache
+@st.cache_data
 def load_data():
     url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
     html = pd.read_html(url, header = 0)
@@ -80,3 +80,25 @@ if st.button('Show Plots'):
     st.header('Stock Closing Price')
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
+
+st.link_button("<< Go back to portfolio website", "https://vincelander.github.io/", use_container_width=True)
+
+
+#  import streamlit as st
+# >>>
+# >>> st.markdown("*Streamlit* is **really** ***cool***.")
+# >>> st.markdown('''
+# ...     :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
+# ...     :gray[pretty] :rainbow[colors] and :blue-background[highlight] text.''')
+# >>> st.markdown("Here's a bouquet &mdash;\
+# ...             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
+# >>>
+# >>> multi = '''If you end a line with two spaces,
+# ... a soft return is used for the next line.
+# ...
+# ... Two (or more) newline characters in a row will result in a hard return.
+# ... '''
+# >>> st.markdown(multi)
+# output
+
+# https://doc-markdown.streamlit.app/ height: 350px
