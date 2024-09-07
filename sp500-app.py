@@ -84,20 +84,9 @@ if st.button('Show Plots'):
 st.link_button("<< Go back to portfolio website", "https://vincelander.github.io/", use_container_width=True)
 
 
-# Define the CSS for right alignment
-st.markdown(
-    """
-    <style>
-    .right-align {
-        display: flex;
-        justify-content: flex-end;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+import streamlit as st
 
-# Create a container and apply the CSS class
-st.markdown('<div class="right-align">', unsafe_allow_html=True)
-st.button("Right Aligned Button")
-st.markdown('</div>', unsafe_allow_html=True)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.button("Centered Button")
+
